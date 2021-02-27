@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://wallpapercave.com/wp/wp2666508.jpg);
+    color:whitesmoke;
+}
+
+.page-wrap{
+    position: relative;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+}
+
+#product-section,
+#details-section,
+#certification-section,
+#subscribe-section{
+    border: rgba(255, 217, 0, 0.438) solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    border: springgreen solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li{
+    border: steelblue solid;
+}
+
+nav{
+    max-width: 66%;
+    border: springgreen solid;
+}
+
+.logo{
+    max-width: 33%;
+    border: violet solid;
+}
+
+.logo img{
+    border: rgb(37, 123, 173) solid;
+}
+
+#video {
+    max-width: 560px;
+    width: 100%;
+}
+
+#certification-img {
+    max-width: 450px;
+    width: 100%;
+}
+
+
+
