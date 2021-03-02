@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 
 :root {
-    --main-black: rgb(0, 0, 0, 0.6);
+    --gold-theme-color: rgba(215, 181, 109, 1);
+    --main-black: rgba(0, 0, 0, 0.6);
     --gradient-black: linear-gradient(
     rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.6));
@@ -24,7 +25,8 @@ body {
 }
 
 .container{
-    max-width: 1000px;
+    max-width: 1080px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -40,7 +42,7 @@ a {
 #details-section,
 #certification-section,
 #subscribe-section{
-    border: rgba(255, 217, 0, 0.438) solid;
+    border: var(--gold-theme-color) solid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,39 +53,87 @@ header {
     background: var(--gradient-black);
     position: fixed;
     width: 100%;
-    border: springgreen solid;
+    top: 0;
+    min-height: 75px;
+    padding: 0px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 
-nav ul{
-    width: 100%;
+nav ul{ 
+    width: 35vw;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 nav ul li{
-    border: steelblue solid;
+    margin: 0 5px;
 }
 
-nav{
-    max-width: 66%;
-    display: flex;
-    align-items: center;
-    border: rgb(145, 196, 28) solid;
+.nav-link{
+    color: var(--gold-theme-color);
 }
 
 .logo{
-    max-width: 33%;
-    align-self: center;
-    border: violet solid;
+    width: 60vw;
+    position: static;
+    /*border: violet solid;*/
 }
 
 .logo img{
     width: 100%;
+    height: 100%;
+    max-width: 190px;
     display: flex;
-    align-content: center;
-    border: rgb(37, 123, 173) solid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul{
+        width: 35vw;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul li{
+        margin: 1px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    header {
+        flex-wrap: wrap;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    nav ul{
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul li{
+        margin: 1px 0;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 #video {
