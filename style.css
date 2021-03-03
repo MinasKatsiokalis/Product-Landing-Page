@@ -1,11 +1,12 @@
+/* global element styling */
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 
 :root {
     --gold-theme-color: rgba(215, 181, 109, 1);
     --main-black: rgba(0, 0, 0, 0.6);
-    --gradient-black: linear-gradient(
-    rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.6));
+    --gradient-black: linear-gradient(180deg,
+    rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.8));
 }
 
 *{
@@ -16,7 +17,13 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url(https://wallpapercave.com/wp/wp2666508.jpg);
+    background-image: linear-gradient(90deg,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.3),
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 1)),
+    url(https://wallpapercave.com/wp/wp2666508.jpg);
     color:whitesmoke;
 }
 
@@ -28,6 +35,7 @@ body {
     max-width: 1080px;
     width: 100%;
     margin: 0 auto;
+    margin-top: 60px;
 }
 
 li {
@@ -38,23 +46,19 @@ a {
     text-decoration: none;
 }
 
-#product-section,
-#details-section,
-#certification-section,
-#subscribe-section{
-    border: var(--gold-theme-color) solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+h2 {
+    font-size: larger;
+    text-align: center;
 }
+
+/* menu element styling */
 
 header {
     background: var(--gradient-black);
     position: fixed;
     width: 100%;
     top: 0;
-    min-height: 75px;
+    min-height: 60px;
     padding: 0px 20px;
     display: flex;
     justify-content: space-around;
@@ -92,6 +96,8 @@ nav ul li{
     text-align: center;
 }
 
+/* menu on tablets */
+
 @media (max-width: 768px) {
     
     .logo{
@@ -100,21 +106,41 @@ nav ul li{
     }
 
     nav ul{
-        width: 35vw;
-        flex-direction: column; 
-        align-items: center;
-        justify-content: center;
+        width: 55vw; 
     }
 
     nav ul li{
-        margin: 1px 0;
-        width: 100%;
         text-align: center;
+    }
+}
+
+/* menu on phones */
+@media (max-width: 650px) {
+    
+    .container{
+        margin-top: 71px;
+    }
+    
+    header {
+        flex-direction: column;
+    }
+
+    .logo{
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    #certification-section h2{
+        font-size: medium;
     }
 }
 
 @media (max-width: 600px) {
     
+    .container{
+        margin-top: 155px;
+    }
+
     header {
         flex-wrap: wrap;
     }
@@ -134,17 +160,166 @@ nav ul li{
         width: 100%;
         text-align: center;
     }
+
+    #certification-section h2{
+        font-size: medium;
+    }
+}
+
+/* section elements styling */
+
+#product-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+#product-section h2{
+    background-color: var(--gold-theme-color);
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: black;
+}
+
+#product-section p{
+    text-align: center;
+    margin-top: 1rem;
 }
 
 #video {
+    margin-top: 1.5rem;
     max-width: 560px;
     width: 100%;
+}
+
+#details-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+#details-section h2{
+    background-color: var(--gold-theme-color);
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: black;
+}
+
+#details-section ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    color: white;
+}
+
+#details-section ul li a{
+    color: var(--gold-theme-color);
+}
+
+#certification-section{
+    /*border: var(--gold-theme-color) solid;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+#certification-section h2{
+    background-color: var(--gold-theme-color);
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: black;
 }
 
 #certification-img {
     max-width: 450px;
     width: 100%;
+    margin-top: 50px;
 }
 
+#subscribe-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
 
+#subscribe-section p{
+    text-align: center;
+    margin-top: 1rem;
+}
 
+#subscribe-section h2{
+    background-color: var(--gold-theme-color);
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: black;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#email{
+    margin: 0 5px;
+}
+
+#submit{
+    background-color: var(--gold-theme-color);  
+    border-radius: 20px;
+    padding: 1px 2px;
+}
+
+/* footer element styling */
+
+footer{
+    background: linear-gradient(0deg,
+        rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.5));
+    width: 100%;  
+    bottom: 0;
+}
+
+.footer-container{
+    min-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+#copyrights{
+    justify-content: end;
+    width: 100%;
+    text-align: center;
+    border-top: 1px var(--gold-theme-color) solid;
+}
+
+.social-icon i{
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    border-radius: 20%;
+    margin: 15px 2px;
+    background-color:var(--gold-theme-color);    
+    color: black;
+}
+
+#footer-link{
+    margin-top: 10px;
+}
+
+#site-link{
+    color:var(--gold-theme-color);  
+}

@@ -2,6 +2,8 @@
 <head> 
     <title>Product Page | Lotus Earings</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -42,7 +44,7 @@
                     <li>Color: Blue</li>
                     <li>Unique Piece</li>
                     <li>Made in: Greece</li>
-                    <li>Handmade by <a target="_blank" href="https://iroxenaki.com/about/">Iro Xenaki</a></li>
+                    <li>Handmade by <a id="about-link" target="_blank" href="https://iroxenaki.com/about/">Iro Xenaki</a></li>
                 </ul>
             </section>
             <section id="certification-section">
@@ -71,8 +73,15 @@
             </section>
         </div>
         <footer class="footer">
-            <span>More Info & Products <a target="_blank" href="https://iroxenaki.com/">Here!</a></span>
-            <span>Copyright 2021, Iro Xenaki<br>Made by: Minas Katsiokalis</span>
+            <div class="footer-container">
+                <span id="footer-link">More Info & Products <a id="site-link" target="_blank" href="https://iroxenaki.com/">Here!</a></span>
+                <div class="social-media">
+                    <a class="social-icon" target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="social-icon" target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a class="social-icon" target="_blank" href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+                </div>
+                <span id="copyrights"> Copyrights &copy; 2021 | Iro Xenaki | Made by: Minas Katsiokalis</span>
+            </div>
         </footer>
     </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
